@@ -17,12 +17,18 @@ getMovies(API_URL)
 
 
 
+
+
+
 async function getMovies(url) {
     const res = await fetch(url)
     const data = await res.json()
 
     showMovies(data.results)
 }
+
+
+
 
 
 
@@ -46,9 +52,13 @@ function showMovies(movies) {
           ${overview}
         </div>
         `
+
+     
         main.appendChild(movieEl)
     })
 }
+
+
 
 
 
@@ -62,16 +72,32 @@ function getClassByRate(vote) {
     }
 }
 
+
+
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
+
+ 
     const searchTerm = search.value
 
+ 
+
     if(searchTerm && searchTerm !== '') {
+
+     
         getMovies(SEARCH_API + searchTerm)
 
+     
+
         search.value = ''
+
+     
     } else {
+
+
+     
         window.location.reload()
+     
     }
 })
