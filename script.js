@@ -52,7 +52,7 @@ function showMovies(movies) {
 
 
 
-function getClassByRate(vote) {
+function geClassByRate(vote) {
     if(vote >= 8) {
         return 'green'
     } else if(vote >= 5) {
@@ -62,7 +62,7 @@ function getClassByRate(vote) {
     }
 }
 
-form.addEventListener('submit', (e) => {
+form.addEentListener('submit', (e) => {
     e.preventDefault()
 
     const searchTerm = search.value
